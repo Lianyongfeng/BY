@@ -1,5 +1,14 @@
+$(".nav-menu").click(function(){
+    $(this).children(".nav").toggle(1000);
+})
+$(".nav-menu").mouseenter(function () {
+    $(this).children(".nav").stop(false,true).slideDown(1000)
+})
+$(".nav-menu").mouseleave(function () {
+    $(this).children(".nav").stop(false,true).slideUp(1000)
+})
+
 function bg() {
-    clearInterval(timer)
     if($(".on").next().length==0){
         $(".on").removeClass("on");
         $(".Carousel-figure>div:first-child").addClass("on");
@@ -13,6 +22,13 @@ function bg() {
     $(".on").css('backgroundImage',src);
 }
 var timer = setInterval(bg,2000);
+$(".Carousel-figure").mouseenter(function () {
+    clearInterval(timer);
+});
+$(".Carousel-figure").mouseleave(function () {
+    timer = setInterval(bg,2000);
+});
+
 $(".glyphicon-menu-right").click(function () {
     $(".on").removeClass("on").next().addClass("on");
     if($(".on").next().length==0) {

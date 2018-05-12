@@ -53,6 +53,9 @@ ul li {
         display: block;
         z-index: 100;
     }
+    .glyphicon{
+        margin-top: 1rem;
+    }
 }
 .header div:nth-child(n){
     width: 24%;
@@ -280,7 +283,7 @@ ul li {
     }
 }
 @media (max-width: 780px) {
-    .bg1,.bg2,.bg3{
+    .bg1,.bg2,.bg3,.Carousel-figure{
         height: 300px;
     }
 }
