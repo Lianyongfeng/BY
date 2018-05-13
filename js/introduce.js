@@ -30,16 +30,20 @@ $(".Carousel-figure").mouseleave(function () {
 });
 
 $(".glyphicon-menu-right").click(function () {
-    $(".on").removeClass("on").next().addClass("on");
     if($(".on").next().length==0) {
         $(".on").removeClass("on");
         $(".Carousel-figure>div:first-child").addClass("on");
     }
+    else {
+        $(".on").removeClass("on").next().addClass("on");
+    }
 });
 $(".glyphicon-menu-left").click(function () {
-    $(".on").removeClass("on").prev().addClass("on");
     if($(".on").prev().length==0){
         $(".on").removeClass("on");
         $(".Carousel-figure>div:first-child").addClass("on");
+    }
+    else {
+        $(".on").removeClass("on").next().addClass("on");
     }
 })
