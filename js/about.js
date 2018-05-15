@@ -16,4 +16,5 @@ $(".btn").click(function () {
     myText.appendChild(myStr);
     roll[0].appendChild(myText);
     $(".board-text").val("");
+    localStorage.setItem("value",val)
 })
